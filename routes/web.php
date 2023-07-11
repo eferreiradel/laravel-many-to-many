@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\ComicsController;
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,8 +20,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
+Route::get('/admin.dashboard', function () {
+    return view('admin.dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware(['auth'])
@@ -27,6 +29,7 @@ Route::middleware(['auth'])
 ->name('admin.')
 ->group(function() {
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
+    Route::post('/post', [PostController::class, 'store'])->name('posts.store');
 });
 
 require __DIR__.'/auth.php';
