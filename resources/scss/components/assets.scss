@@ -1,0 +1,13 @@
+@import "./measures.scss";
+
+.aside {
+  background-color: rebeccapurple;
+}
+
+.navbar--height {
+  height: $navbar--height;
+}
+
+.main--height {
+  height: calc(100vh - $navbar--height);
+}
