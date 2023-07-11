@@ -41,11 +41,11 @@ class PostController extends Controller
         ]);
 
         $post = new Post;
-        $post->tilte= $validateData['title'];
+        $post->title= $validateData['title'];
         $post->content=$validateData['content'];
         $post->save();
         
-
+        return redirect()->route('admin.dashboard');
     }
 
     /**

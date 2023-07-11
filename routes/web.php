@@ -24,12 +24,13 @@ Route::get('/admin.dashboard', function () {
     return view('admin.dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::post('/post', [PostController::class, 'store'])->name('post.store');
+
 Route::middleware(['auth'])
 ->prefix('admin')
 ->name('admin.')
 ->group(function() {
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
-    Route::post('/post', [PostController::class, 'store'])->name('posts.store');
 });
 
 require __DIR__.'/auth.php';
