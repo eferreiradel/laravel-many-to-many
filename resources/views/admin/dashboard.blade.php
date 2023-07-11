@@ -8,7 +8,7 @@
                     <div class="container p-5 text-white">
                         <ul>
                             <li>
-                                <a href="{{route()}}"></a>
+                                <a href="">View all posts</a>
                             </li>
                         </ul>
                     </div>
