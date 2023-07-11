@@ -3,14 +3,10 @@
     @section('content')
     <div class="container-fluid">
         <div class="row main--height">
-            <div class="col-2 bg-danger">
-                <div class="container-fluid">
-                    <div class="container p-5 text-white">
-                        <ul>
-                            <li>
-                                <a href="">View all posts</a>
-                            </li>
-                        </ul>
+            <div class="col-2 bg-danger px-0">
+                <div class="container-fluid px-0">
+                    <div class="container px-2 py-5 text-white">
+                        @include('admin.dashboard-aside')
                     </div>
                 </div>
             </div>
