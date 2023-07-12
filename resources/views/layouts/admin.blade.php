@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <!-- Usando Vite -->
     @vite(['resources/js/app.js'])
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('scss/app.scss') }}" rel="stylesheet">
 </head>
 <div id="app">
     <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm navbar--height">
