@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
@@ -18,8 +18,6 @@
     <!-- Usando Vite -->
     @vite(['resources/js/app.js'])
     <link href="{{ asset('scss/app.scss') }}" rel="stylesheet">
-
-
 </head>
 
 <body>

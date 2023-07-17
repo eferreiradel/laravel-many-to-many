@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\ApiController;
 use App\Http\Controllers\ComicsController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
@@ -32,5 +33,7 @@ Route::middleware(['auth'])
 ->group(function() {
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
 });
+
+Route::get('/api', [ApiController::class, 'index']);
 
 require __DIR__.'/auth.php';
